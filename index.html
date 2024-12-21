@@ -9,22 +9,34 @@
     <link rel="stylesheet" href="src/style.css">
     <title>Vite App</title>
   </head>
-  <body>
-     <nav class="bg-black h-[100%] w-[100%] " >
+  <body class="bg-green-100">
+     <nav class=" bg-emerald-200 h-[100%] w-[100%] pb-3 mb-10 " >
 
       
-       <ul id="menu" class="hidden flex flex-col items-center  gap-20 mt-10 text-2xl text-white  ">
-
-         <li><a href="#">Home</a></li>
-         <li><a href="#details">Details</a></li>
-         <li><a href="#strive">Strive</a></li>
-         <li><a href="#contro">Contributors</a></li>
+      <i  onclick="toggle()" class=" hambar fa-duotone fa-solid fa-bars pt-4 text-3xl  flex justify-end pr-6" ></i>
+      
+       <ul  id="menu" class="hidden flex flex-col items-center  gap-20 mt-10 text-2xl text-stone-700  font-semibold pt-6 pb-10 ">
+          
+        <li class="fa-sharp fa-solid fa-xmark text-4xl text-red-800 hover:text-black " onclick="closetoggle()"></li>
+         <li class="hover:bg-slate-50 h-10 border-3xl pl-60 pr-60 rounded-2xl" ><a href="#" onclick="itemclick()">Home</a></li>
+         <li class="hover:bg-slate-50 h-10 border-3xl pl-60 pr-60 rounded-2xl"><a href="#details" onclick="itemclick()">Details</a></li>
+         <li class="hover:bg-slate-50 h-10 border-3xl pl-60 pr-60 rounded-2xl"><a href="#strive" onclick="itemclick()">Strive</a></li>
+         <li class="hover:bg-slate-50 h-10 border-3xl pl-60 pr-60 rounded-2xl"><a href="#contro" onclick="itemclick()">Contributors</a></li>
        </ul>
 
-       <i class=" hambar fa-duotone fa-solid fa-bars text-3xl mt-2 flex justify-end pr-6 bg-white" onclick=toggle()></i>
-      
-
      </nav>
-    <script type="module" src="/src/main.js"></script>
+
+     <!-- sections -->
+     <h1 class="text-3xl font-semibold text-red-800 text-center mb-9">please select the domain</h1>
+
+      <div class="text-center mt-4 flex flex-col justify-between gap-4 items-center" >
+ 
+           <div class="text-3xl h-60 w-60 bg-yellow-600 flex justify-center  items-center rounded-3xl border-8 hover:border-x-violet-500 hover:border-y-violet-700 ">Java</div>
+           <div class="text-3xl h-60 w-60 bg-blue-800 flex justify-center  items-center rounded-3xl border-8 hover:border-x-red-500 hover:border-y-orange-500">Python</div>
+           <div class="text-3xl h-60 w-60 bg-yellow-300 flex justify-center  items-center rounded-3xl border-8 hover:border-x-blue-600 hover:border-y-blue-700">Java script</div>
+      </div>
+
+
+    <script src="/src/app.js"></script>
   </body>
 </html>
